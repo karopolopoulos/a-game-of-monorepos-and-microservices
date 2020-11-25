@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "a growing example of a monorepo structure",
   "scripts": {
-    "bootstrap": "bash scripts/bin/bootstrap.bash",
+    "bootstrap": "lerna bootstrap --force-local",
+    "init": "bash scripts/bin/bootstrap.bash",
     "clean": "lerna clean",
     "diff": "lerna diff",
-    "install": "lerna exec -- npm install",
+    "exec": "lerna exec --",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
     "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 1"
   },
