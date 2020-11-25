@@ -16,7 +16,7 @@
     "test": "jest",
     "test:watch": "jest --coverage --watch --verbose",
     "print:project": "asciify ' service service ' -f puffy",
-    "precommit": "npm run print:project"
+    "precommit": "npm run print:project && lint-staged && npm run test"
   },
   "devDependencies": {
     "asciify": "^1.3.5",

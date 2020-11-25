@@ -8,8 +8,11 @@
     "clean": "lerna clean",
     "diff": "lerna diff",
     "exec": "lerna exec --",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run lint:fix --parallel",
+    "test": "lerna run test --parallel",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
-    "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 1"
+    "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 2 --stream"
   },
   "repository": {
     "type": "git",
