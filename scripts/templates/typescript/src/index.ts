@@ -1,5 +1,5 @@
 export const main = (): string => {
-  const message: string = 'Hello world!';
+  const message = 'Hello world!';
 
   console.log(message);
   return message;
