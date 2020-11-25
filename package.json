@@ -1,0 +1,21 @@
+{
+  "name": "a-game-of-monorepos-and-microservices",
+  "version": "1.0.0",
+  "description": "a growing example of a monorepo structure",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karopolopoulos/a-game-of-monorepos-and-microservices.git"
+  },
+  "author": "Evan Karopoulos (https://github.com/karopolopoulos)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karopolopoulos/a-game-of-monorepos-and-microservices/issues"
+  },
+  "homepage": "https://github.com/karopolopoulos/a-game-of-monorepos-and-microservices#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
