@@ -15,7 +15,7 @@
     "prettier:write": "prettier -l --write . --config .prettierrc.yml",
     "test": "jest",
     "test:watch": "jest --coverage --watch --verbose",
-    "print:project": "asciify ' service service ' -f puffy",
+    "print:project": "asciify '<service> service' -f puffy",
     "precommit": "npm run print:project && lint-staged && npm run test"
   },
   "devDependencies": {

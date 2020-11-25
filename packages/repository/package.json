@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/service",
+  "name": "@monorepo/repository",
   "version": "1.0.0",
   "description": "",
   "repository": {
@@ -9,36 +9,26 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --format codeframe --ext js,ts .",
-    "lint:fix": "eslint --format codeframe --ext js,ts --fix .",
+    "lint": "eslint --format codeframe --ext js .",
+    "lint:fix": "eslint --format codeframe --ext js --fix .",
     "prettier:check": "prettier --check . --config .prettierrc.yml",
     "prettier:write": "prettier -l --write . --config .prettierrc.yml",
     "test": "jest",
     "test:watch": "jest --coverage --watch --verbose",
-    "print:project": "asciify '<service> service' -f puffy",
-    "precommit": "npm run print:project && lint-staged && npm run test",
-    "tsc": "tsc"
+    "print:project": "asciify 'repository service' -f puffy",
+    "precommit": "npm run print:project && lint-staged && npm run test"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.15",
-    "@types/node": "^14.14.10",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "@typescript-eslint/parser": "^4.8.2",
     "asciify": "^1.3.5",
     "eslint": "^7.14.0",
-    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.2",
-    "prettier": "^2.2.0",
-    "ts-jest": "^26.4.4",
-    "ts-loader": "^8.0.11",
-    "typescript": "^4.1.2",
-    "webpack": "^5.6.0"
+    "prettier": "^2.2.0"
   },
   "dependencies": {}
 }
