@@ -18,7 +18,7 @@ get_input() {
 
 copy_template() {
     echo "copying template '$template' to '$init_path/$service_name'..."
-    mkdir -p ${__dir}/../../$init_path/$service_name && cp -a $templates_folder/$template ${__dir}/../../$init_path/$service_name
+    mkdir -p ${__dir}/../../$init_path/$service_name && cp -a $templates_folder/$template/ ${__dir}/../../$init_path/$service_name
 }
 
 get_input
