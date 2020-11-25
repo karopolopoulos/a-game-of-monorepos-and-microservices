@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": ["es2020"],
+    "outDir": "dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "types": [
+      "aws-lambda",
+      "node",
+      "graphql",
+      "jsonwebtoken",
+      "jest",
+      "lodash.get"
+    ],
+    "esModuleInterop": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["modules.d.ts", "src/**/*"]
+}

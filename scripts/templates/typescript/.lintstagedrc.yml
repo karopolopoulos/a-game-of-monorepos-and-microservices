@@ -1,0 +1,5 @@
+'*.{js,ts}':
+  - eslint --format codeframe --fix
+  - prettier --write
+'*.{json,yaml,yml,md}':
+  - prettier --write

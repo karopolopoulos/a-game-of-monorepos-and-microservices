@@ -1,13 +1,15 @@
 {
-  "name": "a-game-of-monorepos-and-microservices",
+  "name": "monorepo",
   "version": "1.0.0",
   "description": "a growing example of a monorepo structure",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "lerna exec -- npm install",
+    "print:project": "asciify 'A Game of Monorepos and Microservices' -f puffy",
+    "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karopolopoulos/a-game-of-monorepos-and-microservices.git"
+    "url": "ssh://git@github.com:karopolopoulos/a-game-of-monorepos-and-microservices.git"
   },
   "author": "Evan Karopoulos (https://github.com/karopolopoulos)",
   "license": "MIT",
@@ -16,6 +18,8 @@
   },
   "homepage": "https://github.com/karopolopoulos/a-game-of-monorepos-and-microservices#readme",
   "devDependencies": {
+    "asciify": "^1.3.5",
+    "husky": "^4.2.5",
     "lerna": "^3.22.1"
   }
 }
