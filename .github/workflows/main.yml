@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Deploy
+      - name: build
         run: |
           npm ci
           npm run bootstrap:ci
@@ -22,8 +22,8 @@ jobs:
           npm run test:ci
         env:
           CI: true
-      - name: Deploy
+      - name: deploy
         run: |
-          npm run deploy
+          npm run deploy:ci
         env:
           CI: true
