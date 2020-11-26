@@ -1,7 +1,8 @@
-import { main } from './index';
+import { recordVote, SURVEY_SCORE } from './index';
 
 describe('Service Test', () => {
   test('main function returns message', () => {
-    expect(main()).toEqual('Hello world!');
+    const characterId = '1';
+    expect(recordVote(characterId)).toEqual(SURVEY_SCORE);
   });
 });

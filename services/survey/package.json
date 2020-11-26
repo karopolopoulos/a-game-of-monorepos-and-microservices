@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/poll",
+  "name": "@monorepo/survey",
   "version": "1.0.0",
   "description": "",
   "repository": {
@@ -13,7 +13,7 @@
     "lint:fix": "eslint --format codeframe --ext js,ts --fix .",
     "test": "jest",
     "test:watch": "jest --coverage --watch --verbose",
-    "print:project": "asciify 'poll service' -f puffy",
+    "print:project": "asciify 'survey service' -f puffy",
     "precommit": "npm run print:project && lint-staged && npm run test",
     "tsc": "tsc",
     "start": "ts-node src/server.ts"
