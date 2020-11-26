@@ -1,24 +1,29 @@
-name: ci
+name: application
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: |
-          npm run bootstrap
+      - name: Deploy
+        run: |
+          npm ci
+          npm run bootstrap:ci
           npm run lint:ci
           npm run test:ci
         env:
           CI: true
-      - run: |
+      - name: Deploy
+        run: |
           npm run deploy
         env:
           CI: true
