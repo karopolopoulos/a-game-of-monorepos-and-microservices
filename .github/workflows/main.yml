@@ -16,14 +16,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Build
         run: |
-          npm ci
           npm run bootstrap:ci
           npm run lint:ci
           npm run test:ci
         env:
           CI: true
       - name: Deploy
-        run: |
-          npm run deploy:ci
-        env:
-          CI: true
+        run: npm run deploy:ci
+      - name: Tag
+        run: npm run version:ci
