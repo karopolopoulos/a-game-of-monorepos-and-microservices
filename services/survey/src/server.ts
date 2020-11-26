@@ -5,5 +5,5 @@ import app from './app';
 const PORT = 3002;
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`);
+  console.log(`Survey service listening at http://localhost:${PORT}`);
 });
