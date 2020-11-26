@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/survey",
   "version": "1.0.1",
-  "description": "",
+  "description": "provides a survey",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:karopolopoulos/a-song-of-monorepos-and-microservices.git"
