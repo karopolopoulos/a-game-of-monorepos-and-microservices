@@ -1,46 +1,22 @@
 extends:
-  - airbnb-typescript/base
-  - plugin:@typescript-eslint/eslint-recommended
-  - plugin:@typescript-eslint/recommended
-  - plugin:@typescript-eslint/recommended-requiring-type-checking
-  - plugin:jest/recommended
+  - airbnb-base
   - plugin:prettier/recommended
-parser: '@typescript-eslint/parser'
-parserOptions:
-  project: tsconfig.json
+  - plugin:jest/recommended
 plugins:
-  - '@typescript-eslint'
   - import
   - jest
 rules:
-  '@typescript-eslint/naming-convention':
-    - error
-    - selector: memberLike
-      modifiers:
-        - private
-      format:
-        - camelCase
-      leadingUnderscore: require
-  '@typescript-eslint/no-use-before-define': 'off'
-  '@typescript-eslint/no-unused-vars':
-    - error
-    - 'argsIgnorePattern': ^_
   import/no-unresolved: 'error'
   import/prefer-default-export: 'off'
-  no-console: 'off'
-  no-param-reassign: 'off'
   no-use-before-define: 'off'
   no-underscore-dangle: 'off'
-  no-void:
-    - 'error'
-    - allowAsStatement: true
+  no-console: 'off'
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: ^_
+  class-methods-use-this: 'off'
 env:
-  browser: true
-  es6: true
-  jest: true
   jest/globals: true
   node: true
-settings:
-  import/resolver:
-    typescript:
-      alwaysTryTypes: true
+  es6: true
+  jest: true

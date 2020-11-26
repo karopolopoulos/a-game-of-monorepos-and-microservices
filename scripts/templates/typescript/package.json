@@ -11,8 +11,6 @@
   "scripts": {
     "lint": "eslint --format codeframe --ext js,ts .",
     "lint:fix": "eslint --format codeframe --ext js,ts --fix .",
-    "prettier:check": "prettier --check . --config .prettierrc.yml",
-    "prettier:write": "prettier -l --write . --config .prettierrc.yml",
     "test": "jest",
     "test:watch": "jest --coverage --watch --verbose",
     "print:project": "asciify '<service> service' -f puffy",

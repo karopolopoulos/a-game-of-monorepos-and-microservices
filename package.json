@@ -5,14 +5,14 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --force-local",
     "init": "bash scripts/bin/bootstrap.bash && npm run bootstrap",
+    "install": "lerna exec -- npm install",
     "clean": "lerna clean",
     "exec": "lerna exec --",
-    "lint": "lerna run lint --parallel",
-    "lint:fix": "lerna run lint:fix --parallel",
-    "test": "lerna run test --parallel",
-    "test:watch": "lerna run test:watch --parallel",
+    "lint": "lerna run lint --stream --concurrency=1",
+    "lint:fix": "lerna run lint:fix --stream --concurrency=1",
+    "test": "lerna run test --stream --concurrency=1",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
-    "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 1",
+    "precommit": "npm run print:project && lerna run precommit --since HEAD --stream --concurrency 1",
     "start": "lerna run start --since HEAD"
   },
   "repository": {
