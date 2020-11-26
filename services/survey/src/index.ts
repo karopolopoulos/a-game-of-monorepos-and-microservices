@@ -21,3 +21,6 @@ export const recordVote = (
 
   return SURVEY_SCORE;
 };
+
+export const getSurveyScore = (): Record<string, CharacterSurveyScore> =>
+  SURVEY_SCORE;

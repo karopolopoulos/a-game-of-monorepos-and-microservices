@@ -3,12 +3,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import express from 'express';
 import cors from 'cors';
-import { recordVote } from '.';
+import { recordVote, getSurveyScore } from '.';
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+app.get('/survey', (_req, res) => {
+  res.json(getSurveyScore());
+});
 
 app.post('/survey', (req, res) => {
   const { characterId } = req.body;
