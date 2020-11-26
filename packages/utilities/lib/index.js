@@ -4,4 +4,12 @@ const randomNumberGenerator = (limit) => {
   return Math.floor(Math.random() * limit);
 };
 
-module.exports = { randomNumberGenerator };
+const arrayToHash = (array) => {
+  const hash = {};
+  array.forEach((v) => {
+    hash[v] = 1;
+  });
+  return hash;
+};
+
+module.exports = { randomNumberGenerator, arrayToHash };
