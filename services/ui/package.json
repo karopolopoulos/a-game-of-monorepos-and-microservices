@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "print:project": "asciify 'survey service' -f puffy",
     "precommit": "npm run print:project",
-    "deploy": "deploying ui!"
+    "deploy": "echo 'deploying ui!'"
   },
   "eslintConfig": {
     "extends": [

@@ -16,7 +16,7 @@
     "print:project": "asciify 'quotes service' -f puffy",
     "precommit": "npm run print:project && lint-staged && npm run test",
     "start": "node lib/server.js",
-    "deploy": "deploying quotes!"
+    "deploy": "echo 'deploying ui!'"
   },
   "devDependencies": {
     "asciify": "^1.3.5",
