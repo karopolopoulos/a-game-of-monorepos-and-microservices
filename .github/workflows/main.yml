@@ -16,6 +16,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Build
         run: |
+          npm ci
           npm run bootstrap:ci
           npm run lint:ci
           npm run test:ci
