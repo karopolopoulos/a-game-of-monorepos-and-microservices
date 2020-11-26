@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/survey",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "provides a survey",
   "repository": {
     "type": "git",
