@@ -1,4 +1,10 @@
 {
   "version": "independent",
-  "packages": ["packages/*", "services/*"]
+  "packages": ["packages/*", "services/*"],
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s",
+      "conventionalCommits": true
+    }
+  }
 }
