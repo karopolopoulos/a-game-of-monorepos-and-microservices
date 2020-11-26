@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "a growing example of a monorepo structure",
   "scripts": {
-    "bootstrap": "bash scripts/bin/bootstrap.bash && lerna bootstrap --force-local",
-    "init": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap --force-local",
+    "init": "bash scripts/bin/bootstrap.bash && npm run bootstrap",
     "clean": "lerna clean",
-    "diff": "lerna diff",
     "exec": "lerna exec --",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
     "test": "lerna run test --parallel",
+    "test:watch": "lerna run test:watch --parallel",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
-    "precommit": "npm run print:project && lerna run precommit --since HEAD --concurrency 1 --stream"
+    "precommit": "npm run print:project && lerna run precommit --since HEAD~1 --concurrency 1",
+    "start": "lerna run start --since HEAD"
   },
   "repository": {
     "type": "git",
