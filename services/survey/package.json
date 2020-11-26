@@ -16,7 +16,8 @@
     "print:project": "asciify 'survey service' -f puffy",
     "precommit": "npm run print:project && lint-staged && npm run test",
     "tsc": "tsc",
-    "start": "ts-node src/server.ts"
+    "start": "ts-node src/server.ts",
+    "deploy": "deploying survey!"
   },
   "devDependencies": {
     "@types/cors": "^2.8.8",

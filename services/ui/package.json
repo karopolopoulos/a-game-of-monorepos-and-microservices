@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@monorepo/ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "print:project": "asciify 'survey service' -f puffy",
+    "precommit": "npm run print:project",
+    "deploy": "deploying ui!"
   },
   "eslintConfig": {
     "extends": [
