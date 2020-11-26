@@ -3,7 +3,7 @@
   "packages": ["packages/*", "services/*"],
   "command": {
     "version": {
-      "message": "chore(release): publish %s",
+      "message": "chore(release): publish",
       "conventionalCommits": true
     }
   }
