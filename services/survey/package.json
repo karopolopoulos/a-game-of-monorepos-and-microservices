@@ -38,5 +38,7 @@
     "typescript": "^4.1.2",
     "webpack": "^5.6.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@monorepo/utilities": "file:../../packages/utilities"
+  }
 }
