@@ -13,7 +13,7 @@
     "test": "lerna run test --parallel",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
     "precommit": "npm run print:project && lerna run precommit --since HEAD --stream --concurrency 1",
-    "start": "lerna run start --since HEAD"
+    "start": "lerna run start --parallel"
   },
   "repository": {
     "type": "git",

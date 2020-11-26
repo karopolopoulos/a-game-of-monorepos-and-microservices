@@ -1,8 +1,10 @@
-const main = () => {
-  const message = 'Hello world!';
+const { randomNumberGenerator } = require('@monorepo/utilities');
+const gameOfThronesQuotes = require('./resources/game-of-thrones-quotes.json');
 
-  console.log(message);
-  return message;
+const generateQuote = () => {
+  const randNumber = randomNumberGenerator(gameOfThronesQuotes.length);
+
+  return gameOfThronesQuotes[randNumber];
 };
 
-module.exports = { main };
+module.exports = { generateQuote };

@@ -1,7 +1,13 @@
-const { main } = require('../lib/index');
+const request = require('supertest');
+const app = require('../lib/app');
 
-describe('Service Test', () => {
-  test('main function returns message', () => {
-    expect(main()).toEqual('Hello world!');
+describe('Quotes Service Test', () => {
+  test('The GET /quote endpoint should respond with a random quote', async () => {
+    const response = await request(app).get('/quote');
+    expect(response.statusCode).toBe(200);
+    expect(response.body).toEqual({
+      quote: expect.any(String),
+      character: expect.any(String),
+    });
   });
 });
