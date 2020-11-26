@@ -27,7 +27,7 @@ jobs:
       - name: Deploy
         run: npm run deploy:ci
       - name: Release
-        run: npm run version:ci
-        env:
-          GIT_AUTHOR_NAME: '@lerna-bot'
-          GIT_AUTHOR_EMAIL: 'lerna-bot@github.com'
+        run: |
+          git config user.name "@lerna-bot"
+          git config user.email "lerna-bot@github.com"
+          npm run version:ci
