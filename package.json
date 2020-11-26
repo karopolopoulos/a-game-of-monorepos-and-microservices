@@ -11,13 +11,13 @@
     "exec": "lerna exec --",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
-    "lint:ci": "lerna run lint --since HEAD~1 --parallel",
+    "lint:ci": "lerna run lint --since --parallel",
     "test": "lerna run test --parallel",
-    "test:ci": "lerna run test --since HEAD~1 --parallel",
+    "test:ci": "lerna run test --since --parallel",
     "print:project": "asciify 'A Song of Monorepos and Microservices' -f puffy",
     "precommit": "npm run print:project && lerna run precommit --since HEAD --stream --concurrency 1",
     "start": "lerna run start --parallel",
-    "deploy:ci": "lerna run deploy --since HEAD~1 --parallel"
+    "deploy:ci": "lerna run deploy --since --parallel"
   },
   "repository": {
     "type": "git",
