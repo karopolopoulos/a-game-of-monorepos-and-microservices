@@ -1,14 +1,17 @@
 const express = require('express');
 const cors = require('cors');
-const { generateQuote } = require('.');
+const { generateQuote, getAllQuotes } = require('.');
 
 const app = express();
 
 app.use(cors());
 
 app.get('/quote', (_req, res) => {
-  generateQuote();
   res.json(generateQuote());
+});
+
+app.get('/quotes', (_req, res) => {
+  res.json(getAllQuotes());
 });
 
 module.exports = app;

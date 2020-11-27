@@ -7,4 +7,8 @@ const generateQuote = () => {
   return gameOfThronesQuotes[randNumber];
 };
 
-module.exports = { generateQuote };
+const getAllQuotes = () => {
+  return gameOfThronesQuotes;
+};
+
+module.exports = { generateQuote, getAllQuotes };
