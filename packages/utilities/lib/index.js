@@ -5,11 +5,11 @@ const randomNumberGenerator = (limit) => {
 };
 
 const arrayToHash = (array) => {
-  const hash = {};
+  const hashObj = {};
   array.forEach((v) => {
-    hash[v] = 1;
+    hashObj[v] = 1;
   });
-  return hash;
+  return hashObj;
 };
 
 module.exports = { randomNumberGenerator, arrayToHash };
